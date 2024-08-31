@@ -51,7 +51,6 @@ export class Tree {
     }
 
     drawBranches() {
-        console.log('drawBranches')
         let isEnd = false
 
         for (let i = 0; i < this.branches[this.currentDepth].length; i++) {
@@ -71,7 +70,6 @@ export class Tree {
     }
 
     drawLeaves() {
-        console.log('drawLeaves')
         if (this.isDrwaingBranchesDone === true) {
             for (let i = 0; i < this.leaves.length; i++) {
                 this.leaves[i].draw(this.context);
