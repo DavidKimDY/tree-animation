@@ -21,9 +21,11 @@ class App {
 
     click(event) {
         const {
-            clientX
+            clientX, clientY
         } = event;
-        new Tree(this.context, clientX, this.stageHeight);
+        // new Tree(this.context, clientX, this.stageHeight);
+        // new Tree(this.context, clientX, clientY);
+        new Tree(this.context, clientX, this.stageHeight, clientY);
     }
 
     resize() {

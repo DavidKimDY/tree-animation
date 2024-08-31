@@ -6,7 +6,7 @@ export class Branch {
     this.endY = endY;
     this.color = '#000';
     this.lineWidth = lineWidth;
-    this.frame = 60
+    this.frame = 8
     this.gapX = (endX - startX) / this.frame
     this.gapY = (endY - startY) / this.frame
     this.currentFrame = 0
@@ -14,17 +14,12 @@ export class Branch {
 
   draw(context) {
     if (this.currentFrame == this.frame) {
-      console.log('hit')
       return true;
     }
     context.beginPath();
 
-    this.startX += this.gapX 
-    this.startY += this.gapY 
-
     this.endX = this.startX + this.gapX
     this.endY = this.startY + this.gapY
-
 
     context.moveTo(this.startX, this.startY);
     context.lineTo(this.endX, this.endY);
@@ -44,6 +39,8 @@ export class Branch {
     context.stroke();
     context.closePath();
 
+    this.startX += this.gapX 
+    this.startY += this.gapY 
     this.currentFrame++
 
     return false
