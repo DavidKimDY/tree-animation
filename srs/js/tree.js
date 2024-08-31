@@ -12,7 +12,7 @@ export class Tree {
         this.posY = posY;
         this.branches = [];
         this.leaves = [];
-        this.depth = 11;
+        this.depth = 9;
         this.currentDepth = 0;
         this.height = height;
 
